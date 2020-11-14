@@ -1,0 +1,30 @@
+#include <math.h>
+#include <stdio.h>
+int Myfun(n)
+{
+    int result;
+    if(n == 0 || n == 1){
+        result = 1;
+    }else{
+        result = Myfun(n-1)+Myfun(n-2);
+    }
+    return result;
+}
+int main()
+{
+    int a[31],i,N,max,min;
+    for( i = 0;i<31;i++){
+        a[i] = Myfun(i);
+    }
+	scanf("%d",&N);
+	for(i = 0;i<31;i++){
+		if(N<a[i]){
+			max = i;
+			break;
+		}
+	}
+	min = abs(N-a[max])<abs(N-a[max-1])?abs(N-a[max]):abs(N-a[max-1]);
+	printf("%d\n",min);
+
+    return 0;
+}
