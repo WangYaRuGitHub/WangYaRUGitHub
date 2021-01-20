@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+        function setStyle(x) {
+            document.getElementById(x).style.background="yellow";
+        }
+        function setStyle1(x) {
+            document.getElementById(x).style.background="blue";
+        }
+    </script>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = 'John Doe';
+    </script>
+    <hr>
+    <h1 onclick="this.innerHTML='顺宝'">点击查看我老公</h1>
+    <hr>
+    <div onmouseover="mOver(this)"onmouseout="mOut(this)"style="border: #d393ff;width: 120px;height: 60px;padding: 40px">喜欢的男孩子</div>
+    <script>
+        function mOver(obj) {
+            obj.innerHTML="顺宝"
+        }
+        function mOut(obj) {
+            obj.innerHTML="顺宝是我老公"
+        }
+    </script>
+    <p>
+        "当输入域获得焦点时setStyle函数被触发，该函数改变输入域的背景色"<br>
+        第一个名字:<input type="text" id="fname" onfocus="setStyle(this.id)"><br>
+        最后一个名字:<input type="text" id="lname" onfocus="setStyle1(this.id)">
+    </p>
+    <hr>
+
+</body>
+</html>

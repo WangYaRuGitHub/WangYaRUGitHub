@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--注释的写法:html中只能写为尖括号+！--，js里面可以写//-->
+<html lang="en">
+<!--头标签：不作为网页展示的内容，设置网页配置内容-->
+<head>
+    <!--设置网页编码格式-->
+    <meta charset="UTF-8">
+    <!--设置网页标题-->
+    <title>标题</title>
+    <!--js的使用方式：1、引入一个js文件，在js中写功能型代码-->
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+    <script>
+        //2、这里我们写js代码，HTML中，直接写js
+    </script>
+    <!--css的使用方式: 1、引入css文件-->
+    <link rel="stylesheet" href="替换为css文件的路径">
+    <!--css的使用方式: 2、直接在html中写css的样式-->
+    <style>
+        h2{
+            color: aquamarine;
+            text-align: center;
+        }
+        p{
+            color: #d393ff;
+        }
+        #div3{
+            height: 50px;
+            background: aqua;
+        }
+        #div4{
+            height: 50px;
+            background: brown;
+        }
+        .mydiv{
+            height: 50px;
+            background: aquamarine;
+        }
+    </style>
+
+
+</head>
+<!--body标签是我们网页要展示的内容：一般叫做dom元素/dom标签-->
+<body>
+    <p>这个<br>段落<br>演示了分行的效果</p><br>
+    <a href="https://www.runoob.com/" target="_blank">点我跳转菜鸟教程在线编译器</a><br><br>
+    <img alt="maven" src="http://maven.apache.org/images/maven-logo-black-on-white.png" width="256px" height="128px"> <br>
+    <p>无序列表</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <p>有序列表</p>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <p>表格</p>
+    <table border="1">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>row 1,cell 1</td>
+            <td>row 1,cell 2</td>
+        </tr>
+        <tr>
+            <td>row 2,cell 1</td>
+            <td>row 2,cell 2</td>
+        </tr>
+    </table>
+    <br><br>
+    <form action="xxxx">
+        用户名：<input type="text" name="username">
+        <br>
+        单选框：<input type="radio" name="r"><input type="radio" name="r">
+        复选框：<input type="checkbox"> <input type="checkbox">
+        <br>
+        <select name="selectID">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select><br>
+        <input type="reset" value="重置">
+        <input type="submit" value="提交">
+    </form>
+    <hr>
+    <h2>div/span</h2>
+    <p>使用div配置我们的样式</p>
+    <div style="height: 50px;background: aqua">
+
+    </div>
+    <div style="height: 50px;background: brown"></div>
+    <p>div使用id来设置样式：css代码中，#id的方式来选择dom元素</p>
+    <div id="div3">
+
+    </div>
+    <div id="div4"></div>
+    <p>div使用class来设置样式：css代码中，.mydiv的方式来选择dom元素</p>
+    <div class="mydiv"></div>
+    <div class="mydiv"></div>
+    <span>span文本内容</span>
+
+
+
+
+</body>
+</html>
