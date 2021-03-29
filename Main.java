@@ -1,27 +1,19 @@
+package 瓜子二手车;
+
+import java.util.Scanner;
+
 public class Main {
-    public int findKth(int[] a, int n, int K) {
-        return findKthInternal(a,0,n-1,K);
-    }
-    public int findKthInternal(int[] a, int left, int right,int K){
-        int midindex=partitiondig(a,left,right);
-        if (midindex == K-1) {
-            return a[midindex];
-        } else if (midindex < K-1) {
-            return findKthInternal(a,midindex+1,right,K);
+    public static void main(String args[]) {
+        Scanner scanner=new Scanner(System.in);
+        int n=scanner.nextInt();
+        int coins[]= {1,2,5,10};
+        int [] array=new int[100001];
+        array[0]=1;
+        for(int i=0;i<4;i++) {
+            for(int j=coins[i];j<=n;j++) {
+                array[j]=(array[j]+array[j-coins[i]])%1000000007;
+            }
         }
-        return findKthInternal(a, 0, midindex-1,K);
-    }
-    private static int partitiondig(int[] num, int low, int high) {
-        int tmp = num[low];
-        while(low < high){
-            while((low < high) && tmp >= num[high])//（1）
-                high--;
-            num[low] = num[high];
-            while((low < high) && tmp <= num[low])//（2）
-                low++;
-            num[high] = num[low];
-        }
-        num[low] = tmp;
-        return low;
+        System.out.println(array[n]);
     }
 }
